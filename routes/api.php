@@ -29,6 +29,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function () {
 //home
 Route::group(['middleware' => 'api'], function () {
     Route::post('/project/{id}', [HomeFrontController::class, 'projectDetails']);
+    Route::get('/project/all', [HomeFrontController::class, 'projects']);
     Route::get('/sliders', [HomeFrontController::class, 'sliders']);
     Route::get('/services', [HomeFrontController::class, 'services']);
     Route::get('/teams', [HomeFrontController::class, 'team']);
