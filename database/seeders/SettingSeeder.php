@@ -23,7 +23,8 @@ class SettingSeeder extends Seeder
             'whatsapp' => '01095414200',
             'description' => 'small description about application',
             'copyright' => 'جميع الحقوق محفوظة منصة بصمه، تنفيذ و تطوير بواسطة',
-            'location_url' => 'http://www.google.map.com',
+            'location_url' => 'https://www.google.map.com',
+            'facebook' => 'https://www.facebook.com',
         ];
 
 

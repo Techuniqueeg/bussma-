@@ -24,14 +24,15 @@ class SettingRequest extends FormRequest
     public function rules()
     {
         return [
-            'logo' => 'required|mimes:jpeg,jpg,png',
-            'site_name' => 'required|string|max:191',
-            'phone' => 'required|max:191|min:11|regex:/^([0-9\s\-\+\(\)]*)$/',
+            'logo' => 'nullable|mimes:jpeg,jpg,png',
+            'site_name' => 'nullable|string|max:191',
+            'phone' => 'nullable|numeric|min:11|regex:/^([0-9\s\-\+\(\)]*)$/',
+            'facebook' => 'nullable|string|max:191',
             'location' => 'nullable|string|max:191',
             'location_url' => 'nullable|url|max:191',
-            'whatsapp' => 'nullable|url|max:191',
-            'description' => 'required|string|max:191',
-            'copyright' => 'required|string|max:191',
+            'whatsapp' =>  'nullable|numeric|min:11|regex:/^([0-9\s\-\+\(\)]*)$/',
+            'description' => 'nullable|string|max:191',
+            'copyright' => 'nullable|string|max:191',
         ];
     }
 }

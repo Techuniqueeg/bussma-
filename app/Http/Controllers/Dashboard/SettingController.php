@@ -39,9 +39,9 @@ class SettingController extends GeneralController
         $inputs = $request->validated();
         if ($request->hasFile('logo')) {
             $inputs['logo'] = $this->uploadImage($request->file('logo'), $this->path, $data->where('key', 'logo')->first()->val);
-            $this->model->setMany($inputs);
-            $this->flash('success', 'تم التحديث');
-            return back();
         }
+        $this->model->setMany($inputs);
+        return redirect()->back()->with('success', 'تم التعديل بنجاح');
+
     }
 }

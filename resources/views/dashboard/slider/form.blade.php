@@ -7,8 +7,8 @@
                maxlength="255"/>
     </div>
     <div class="form-group col-md-6">
-        <label>صورة العرض<span
-                class="text-danger">*</span></label>
+        <label> صورة العرض<span
+                class="text-danger">  * يجب ان يكون ابعاد الصوره 2 : 1</span></label>
         <div class="col-lg-8">
 
             <div class="image-input image-input-outline" id="kt_image_1">

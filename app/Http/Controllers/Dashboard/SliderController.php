@@ -38,7 +38,7 @@ class SliderController extends GeneralController
 
         if ($request->image) {
             if ($request->hasFile('image')) {
-                $data['image'] = $this->uploadImage($request->file('image'), $this->image_path, null, 300);
+                $data['image'] = $this->uploadImage($request->file('image'), $this->image_path);
             }
         }
         $trip = $this->model::create($data);
@@ -60,7 +60,7 @@ class SliderController extends GeneralController
         unset($data['_token']);
         if ($request->image) {
             if ($request->hasFile('image')) {
-                $data['image'] = $this->uploadImage($request->file('image'), $this->image_path, null, 300);
+                $data['image'] = $this->uploadImage($request->file('image'), $this->image_path);
             }
         } else {
             unset($data['image']);

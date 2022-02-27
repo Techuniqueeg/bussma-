@@ -28,6 +28,15 @@
     </div>
     <div class="col-lg-6  col-md-6">
         <div class="form-group ">
+            <label for="facebook">رابط الفيسبوك </label>
+            <input type="url" name="facebook" id="facebook"
+                   value="{{ old('facebook', $data->where('key', 'facebook')->first()->val) }}"
+                   class="form-control {{ $errors->has('facebook') ? 'border-danger' : '' }}"
+                   placeholder="أدخل الفيسبوك"/>
+        </div>
+    </div>
+    <div class="col-lg-6  col-md-6">
+        <div class="form-group ">
             <label for="copyright">حقوق الملكيه </label>
             <input type="text" name="copyright" id="location"
                    value="{{ old('copyright', $data->where('key', 'copyright')->first()->val) }}"
@@ -50,6 +59,15 @@
             <input type="number" name="phone" id="phone"
                    value="{{ old('phone', $data->where('key', 'phone')->first()->val) }}"
                    class="form-control {{ $errors->has('phone') ? 'border-danger' : '' }}"
+                   placeholder="أدخل رقم الجوال"/>
+        </div>
+    </div>
+    <div class="col-lg-6  col-md-6">
+        <div class="form-group ">
+            <label for="whatsapp">رقم واتس اب </label>
+            <input type="number" name="whatsapp" id="whatsapp"
+                   value="{{ old('whatsapp', $data->where('key', 'whatsapp')->first()->val) }}"
+                   class="form-control {{ $errors->has('whatsapp') ? 'border-danger' : '' }}"
                    placeholder="أدخل رقم الجوال"/>
         </div>
     </div>

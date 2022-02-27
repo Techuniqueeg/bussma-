@@ -29,6 +29,7 @@ class SliderRequest extends FormRequest
             'title' => 'required|max:255',
             'image' => [
                 'nullable',
+                'dimensions:ratio=2/1',
                 'mimes:jpeg,jpg,png',
                 Rule::requiredIf(function () {
                     return Request::routeIs('sliders.store');
